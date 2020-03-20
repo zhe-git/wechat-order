@@ -10,6 +10,6 @@ import java.util.List;
  * @date 2020/3/19 0:55
  */
 public interface ProductCategoryRepository extends JpaRepository<ProductCategory, Integer> {
-
-    //List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
+    //根据type的来寻找商品的list
+    List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryTypeList);
 }

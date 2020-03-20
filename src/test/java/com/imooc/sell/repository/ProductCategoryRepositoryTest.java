@@ -28,4 +28,27 @@ public class ProductCategoryRepositoryTest {
         ProductCategory productCategory = repository.findOne(1);
         System.out.println(productCategory.toString());
     }
+
+    @Test
+    @Transactional
+    public void saveTest() {
+        ProductCategory productCategory = new ProductCategory("男生最爱", 4);
+        ProductCategory result = repository.save(productCategory);
+        Assert.assertNotNull(result);
+
+        //下面的和上面那个是一样的意思
+        //Assert.assertNotEquals(null, result);
+    }
+
+    @Test
+    public void findByCategoryTypeInTest() {
+        List<Integer> list = Arrays.asList(2,3,4);
+
+        List<ProductCategory> result = repository.findByCategoryTypeIn(list);
+        //查出来的结果大于零
+        Assert.assertNotEquals(0, result.size());
+    }
+
+
+
 }
