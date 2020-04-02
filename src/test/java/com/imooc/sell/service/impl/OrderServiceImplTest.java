@@ -33,7 +33,7 @@ public class OrderServiceImplTest {
 
     private final String BUYER_OPENID = "1101110";
 
-    private final String ORDER_ID = "1584804294581131397";
+    private final String ORDER_ID = "1585772467755858336";
 
     @Test
     public void create() throws Exception {
