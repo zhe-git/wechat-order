@@ -35,4 +35,3 @@ public class WechatPayConfig {
         return wxPayH5Config;
     }
 }
-}
